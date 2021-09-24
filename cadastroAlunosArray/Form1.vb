@@ -15,21 +15,14 @@
             Exit Sub
         End If
 
-        'validar campo sexo
-        If (Not rbtnFem.Checked And Not rbtnMasc.Checked) Then
-            MsgBox("O campo Sexo não foi preenchido.", MsgBoxStyle.Critical, "Por favor, verifique seus dados!")
-            Exit Sub
-        End If
-
-        Dim sexo As String
-        If (rbtnFem.Checked) Then
-            sexo = rbtnFem.Text
-        Else
-            sexo = rbtnMasc.Text
-        End If
+        'validar campo sexo utilizando o short if
+        Dim sexo As String = IIf(rbtnFem.Checked, "Feminino", "Masculino")
 
         'criacao do array e apresentacao do resultado ao usuario
         Dim arrayDados As Object = {txtNome.Text, cpf, txtNascimento.Text, sexo}
-        MsgBox("Dados cadastrados: " & vbCrLf & Join(arrayDados, ", "), MsgBoxStyle.Information, "Confirmação de cadastro")
+        MsgBox("Nome: " & arrayDados(0) _
+             & " - CPF: " & arrayDados(1) _
+             & " - Nascimento: " & arrayDados(2) _
+             & " - Sexo: " & arrayDados(3))
     End Sub
 End Class

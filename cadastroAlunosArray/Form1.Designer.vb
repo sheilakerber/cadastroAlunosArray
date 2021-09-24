@@ -26,8 +26,8 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.rbtnFem = New System.Windows.Forms.RadioButton()
         Me.rbtnMasc = New System.Windows.Forms.RadioButton()
+        Me.rbtnFem = New System.Windows.Forms.RadioButton()
         Me.txtNome = New System.Windows.Forms.TextBox()
         Me.txtMskCpf = New System.Windows.Forms.MaskedTextBox()
         Me.txtNascimento = New System.Windows.Forms.DateTimePicker()
@@ -73,17 +73,6 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Sexo:"
         '
-        'rbtnFem
-        '
-        Me.rbtnFem.AutoSize = True
-        Me.rbtnFem.Location = New System.Drawing.Point(20, 33)
-        Me.rbtnFem.Name = "rbtnFem"
-        Me.rbtnFem.Size = New System.Drawing.Size(67, 17)
-        Me.rbtnFem.TabIndex = 0
-        Me.rbtnFem.TabStop = True
-        Me.rbtnFem.Text = "Feminino"
-        Me.rbtnFem.UseVisualStyleBackColor = True
-        '
         'rbtnMasc
         '
         Me.rbtnMasc.AutoSize = True
@@ -91,9 +80,20 @@ Partial Class Form1
         Me.rbtnMasc.Name = "rbtnMasc"
         Me.rbtnMasc.Size = New System.Drawing.Size(73, 17)
         Me.rbtnMasc.TabIndex = 1
-        Me.rbtnMasc.TabStop = True
         Me.rbtnMasc.Text = "Masculino"
         Me.rbtnMasc.UseVisualStyleBackColor = True
+        '
+        'rbtnFem
+        '
+        Me.rbtnFem.AutoSize = True
+        Me.rbtnFem.Checked = True
+        Me.rbtnFem.Location = New System.Drawing.Point(20, 33)
+        Me.rbtnFem.Name = "rbtnFem"
+        Me.rbtnFem.Size = New System.Drawing.Size(67, 17)
+        Me.rbtnFem.TabIndex = 0
+        Me.rbtnFem.TabStop = True
+        Me.rbtnFem.Text = "Feminino"
+        Me.rbtnFem.UseVisualStyleBackColor = True
         '
         'txtNome
         '
